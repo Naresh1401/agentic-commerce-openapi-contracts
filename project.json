@@ -1,0 +1,15 @@
+{
+  "id": "03",
+  "repo": "agentic-commerce-openapi-contracts",
+  "title": "OpenAPI + Contract Testing",
+  "summary": "OpenAPI export and schema/contract tests for core commerce and MCP-compatible payloads.",
+  "copy": [
+    "backend",
+    "testing/contract_tests",
+    "pytest.ini",
+    "api-contracts.md"
+  ],
+  "extra_tests": {},
+  "verify": "python3.11 -m pytest backend/tests/test_contracts.py testing/contract_tests",
+  "run": "cd backend && python3.11 -m uvicorn app.main:app --reload --port 8000"
+}
